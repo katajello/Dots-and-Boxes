@@ -9,7 +9,12 @@ var game = {
     points: 0,
     color: 'green'
   },
-  boxes: [[],[],[], []]
+  boxes: [
+    [],
+    [],
+    [],
+    []
+  ]
 }
 
 var horizontalSticks = $('.horizontal')
@@ -48,14 +53,16 @@ var sticks = function (stick) {
       // console.log(this.classList[1].split('-'));
       var theBoxes = this.classList[1].split('-');
         for (var i=1; i<theBoxes.length; i++){
-         game.boxes[theBoxes[i]].push('stkclk');
+         game.boxes[theBoxes[i]].push('stick-click');
         //  console.log(game.boxes[theBoxes[i]], theBoxes[i])
     if (game.boxes[theBoxes[i]].length > 3) {
       $('#box' + theBoxes[i]).css('background-color', whichPlayer().color)
       whichPlayer().points +=1
       counter ++
-    } console.log(whichPlayer().points);
-      console.log(counter);
+    } player1Score.innerHTML = ('Player 1 Score: ' + game.player1.points)
+      player2Score.innerHTML = ('Player 2 Score: ' + game.player2.points)
+      // console.log(whichPlayer().points);
+      // console.log(counter);
         }
         // turns off click event
         $(this).off('click');
@@ -63,5 +70,6 @@ var sticks = function (stick) {
     }
   })
 }
+
 sticks(horizontalSticks)
 sticks(verticalSticks)

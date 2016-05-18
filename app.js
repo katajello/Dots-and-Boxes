@@ -22,6 +22,9 @@ var verticalSticks = $('.vertical')
 
 var counter = 0
 
+// for (var i = 6; i < ; i++) {
+
+
 // determines current player and switches turns
 // var currentPlayer
 // function switchTurns() {
@@ -43,6 +46,26 @@ function whichPlayer() {
     return game.player2
   }
 }
+console.log(game.boxes[0].length);
+
+function checkWinner() {
+  var boxCounter = 0
+  for (var i = 0; i < game.boxes.length; i++) {
+    game.boxes[i]
+ if (game.boxes[i].length == 4 ) {
+    boxCounter ++
+  }
+  if (game.boxes.length == boxCounter){
+    if (game.player1.points > game.player2.point){
+      alert('Player 1 Wins')
+    } else if (game.player1.points < game.player2.points) {
+      alert('Player 2 Wins')
+    } else {
+      alert('Tie Game')
+    }
+  }
+}
+}
 // adds event listener to each border in the game field
 var sticks = function (stick) {
   // on click will change background color and push box class to an array
@@ -59,10 +82,11 @@ var sticks = function (stick) {
       $('#box' + theBoxes[i]).css('background-color', whichPlayer().color)
       whichPlayer().points +=1
       counter ++
-    } player1Score.innerHTML = ('Player 1 Score: ' + game.player1.points)
-      player2Score.innerHTML = ('Player 2 Score: ' + game.player2.points)
-      // console.log(whichPlayer().points);
-      // console.log(counter);
+
+    }
+    player1Score.innerHTML = ('Player 1 Score: ' + game.player1.points)
+    player2Score.innerHTML = ('Player 2 Score: ' + game.player2.points)
+    checkWinner()
         }
         // turns off click event
         $(this).off('click');

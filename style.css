@@ -1,6 +1,22 @@
+h1 {
+  text-align: center;
+}
+
 #game-board {
   height: 400px;
-  width: 400px;
+  text-align: center;
+}
+ #row1 {
+   height: 13px;
+ }
+ #row2 {
+   height: 34px;
+ }
+ #row3 {
+   height: 13px;
+ }
+#row4 {
+  height:33px;
 }
 
 .dots {
@@ -10,6 +26,7 @@
   background-color: black;
   border-radius: 50%;
   display: inline-block;
+
 }
 
 .horizontal:hover {
@@ -23,21 +40,24 @@
 .horizontal {
   height: 3px;
   width: 45px;
-  border: 1px solid black;
+  margin-left: -5px;
+  margin-right:-5px;
+  /*border: 1px solid black;*/
   display: inline-block;
 }
 
 .vertical {
   height: 45px;
   width: 3px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   display: inline-block;
 }
 
 .box {
   height: 45px;
   width: 45px;
-  border: 1px solid black;
+  margin-left: -4px;
+  margin-right:-4px;
+  /*border: 1px solid black;*/
   display: inline-block;
-
 }

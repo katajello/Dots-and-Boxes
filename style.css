@@ -1,6 +1,10 @@
+h1 {
+  text-align: center;
+}
+
 #game-board {
   height: 400px;
-  width: 400px;
+  text-align: center;
 }
  #row1 {
    height: 13px;

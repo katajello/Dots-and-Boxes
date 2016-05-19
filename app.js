@@ -3,13 +3,13 @@
 var game = {
   player1: {
     points: 0,
-    color: '#A40E4C',
+    color: '#B4E1FF',
     name: "Player 1",
     display: $('#player1Score')
   },
   player2: {
     points: 0,
-    color: '#F49D6E',
+    color: '#FFACE4',
     name: "Player 2",
     display: $('#player2Score')
   },

@@ -1,14 +1,16 @@
 
 body {
-  min-width: 250px;
+  min-width: 500px;
+  width: 100%;
   cursor: url(pencil_medium.png) 8 36, auto;
   background: url("graphpaper.jpg");
 }
 
 h1 {
   text-align: center;
-  font-family: 'Indie Flower', serif;
-
+  font-family: 'Fredericka the Great', serif;
+  font-size: 50px;
+  color: #AB87FF;
 }
 .heading {
   opacity: 1;
@@ -20,62 +22,69 @@ h1 {
 
 #player1Score {
   float: left;
-  color: #A40E4C;
+  color: #B4E1FF;
   /*background-color: white;*/
-  font-family: 'Chewy', serif;
+  font-family: 'Homemade Apple', serif;
+  font-size: 30px;
 }
 
 #player2Score {
   float: right;
-  color: #F49D6E;
+  color: #FFACE4;
   /*background-color: white;*/
-  font-family: 'Chewy', serif;
+  font-family: 'Homemade Apple', serif;
+  font-size: 30px;
 }
 #current-player-display {
+  text-align: center;
   height: 25px;
+  font-size: 30px;
+  font-family: 'Give You Glory', serif;
+  color: #373F51;
 }
 #game-board {
-  text-align: center;
-  width: 400px;
+  margin: 0 auto;
+  width: 500px;
 }
  #row1 {
+   margin-top: 45px;
    height: 13px;
  }
  #row2 {
-   height: 34px;
+   height: 82px;
  }
  #row3 {
    height: 13px;
  }
 #row4 {
-  height:33px;
+  height: 82px;
 }
 #row5 {
   height: 13px;
 }
 #row6 {
-  height: 34px;
+  height: 82px;
 }
 #row7 {
   height: 13px;
 }
 #row8 {
- height:33px;
+ height: 82px;
 }
 #row9 {
   height: 13px;
 }
 #row10 {
-  height: 34px;
+  height: 82px;
 }
 #row11 {
   height: 13px;
 }
 
 .dots {
-  height: 3px;
-  width: 3px;
-  border: 1px solid black;
+  height: 6px;
+  width: 6px;
+  border: 2px solid black;
   background-color: black;
   border-radius: 50%;
   display: inline-block;
@@ -84,39 +93,52 @@ h1 {
 
 .horizontal:hover {
   background-color: #a6a6a6;
+  border-radius: 5px;
 }
 
 .vertical:hover {
   background-color: #a6a6a6;
+  border-radius: 5px;
 }
 
 .horizontal {
-  height: 3px;
-  width: 45px;
-  margin-left: -5px;
-  margin-right:-5px;
+  height: 6px;
+  width: 90px;
+  margin-left: -10px;
+  margin-right:-10px;
+  border-radius: 5px;
   /*border: 1px solid black;*/
   display: inline-block;
 }
 
 .vertical {
-  height: 45px;
-  width: 3px;
+  height: 90px;
+  width: 8px;
+  border-radius: 5px;
   /*border: 1px solid black;*/
   display: inline-block;
 }
 
 .box {
-  height: 46px;
-  width: 44px;
-  margin-left: -4px;
-  margin-right:-4px;
+  height: 89px;
+  width: 86px;
+  margin-left: -6px;
+  margin-right:-8px;
   /*border: 1px solid black;*/
   display: inline-block;
 }
-
 button {
-  border: 0;
-  height: 22px;
-  margin: 25px;
+border: 0;
+width: 100px;
+height: 70px;
+background-color: #F5FFC6;
+font-size: 24px;
+font-family: 'Frijole', serif;
+color: #AB87FF;
+}
+
+#button-container {
+  width: 100px;
+  margin: 40px auto;
+
 }

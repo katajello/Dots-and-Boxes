@@ -3,13 +3,15 @@
 var game = {
   player1: {
     points: 0,
-    color: 'blue',
-    name: "Player 1"
+    color: '#A40E4C',
+    name: "Player 1",
+    display: $('#player1Score')
   },
   player2: {
     points: 0,
-    color: 'green',
-    name: "Player 2"
+    color: '#F49D6E',
+    name: "Player 2",
+    display: $('#player2Score')
   },
   boxes: [
     [],
@@ -39,14 +41,17 @@ var game = {
     []
   ]
 }
-
-var horizontalSticks = $('.horizontal')
-var verticalSticks = $('.vertical')
+// variable for all horizonal and vertical lines
+var horizontalLines = $('.horizontal')
+var verticalLines = $('.vertical')
 
 var counter = 0
 
 // for (var i = 6; i < ; i++) {
 
+$('#reset').click(function () {
+  location.reload();
+})
 
 // determines current player and switches turns
 // var currentPlayer
@@ -63,6 +68,7 @@ var counter = 0
 
 // tracks current players turn
 var currentPlayer = game.player1
+currentPlayer.display.toggleClass('active')
 
 function switchTurns() {
   if(currentPlayer == game.player1) {
@@ -70,8 +76,10 @@ function switchTurns() {
   } else {
     currentPlayer = game.player1
   }
+game.player1.display.toggleClass('active')
+game.player2.display.toggleClass('active')
 
-  $('#current-player-display').html(currentPlayer.name + ' Its your turn')
+  $('#current-player-display').html('')
 }
 
 function whichPlayer() {
@@ -104,17 +112,17 @@ function checkWinner() {
 }
 }
 // adds event listener to each border in the game field
-var sticks = function (stick) {
+var lines = function (line) {
   // on click will change background color and push box class to an array
-  stick.on('click', function () {
+  line.on('click', function () {
     var sameTurn = false;
-    if (this.getAttribute('style') != 'background-color: black;') {
+    if (this.getAttribute('style') != 'background-color: #a6a6a6;') {
       // console.log($(this).attr('class'));
-      $(this).css('backgroundColor','black')
+      $(this).css('backgroundColor','#a6a6a6')
       // console.log(this.classList[1].split('-'));
       var theBoxes = this.classList[1].split('-');
       for (var i=1; i<theBoxes.length; i++){
-        game.boxes[theBoxes[i]].push('stick-click');
+        game.boxes[theBoxes[i]].push('line-click');
         //  console.log(game.boxes[theBoxes[i]], theBoxes[i])
         if (game.boxes[theBoxes[i]].length > 3) {
           $('#box' + theBoxes[i]).css('background-color', currentPlayer.color)
@@ -122,8 +130,8 @@ var sticks = function (stick) {
 
           sameTurn = true
         }
-        player1Score.innerHTML = ('Player 1: ' + game.player1.points +' boxes')
-        player2Score.innerHTML = ('Player 2: ' + game.player2.points +' boxes')
+        player1Score.innerHTML = (game.player1.name + ": " + game.player1.points)
+        player2Score.innerHTML = (game.player2.name + ": " + game.player2.points)
       }
       if(!sameTurn) {
         switchTurns()
@@ -136,5 +144,5 @@ var sticks = function (stick) {
   })
 }
 
-sticks(horizontalSticks)
-sticks(verticalSticks)
+lines(horizontalLines)
+lines(verticalLines)

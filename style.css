@@ -1,39 +1,35 @@
 
-
-/**this will make my image transparent**/
-.background-image {
-  height: 100%;
-  width: 100%;
-  display: block;
-  min-width: 250px;
-}
-.background-image::after {
-  content: "";
-  background:url("graphpaper.jpg");
-  opacity:0.5;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right:0;
-  position: absolute;
-  z-index: -1;
-}
 body {
   min-width: 250px;
+  cursor: url(pencil_medium.png) 8 36, auto;
+  background: url("graphpaper.jpg");
 }
 
 h1 {
   text-align: center;
+  font-family: 'Indie Flower', serif;
 
 }
 .heading {
   opacity: 1;
 }
+
+.active {
+  text-decoration: underline;
+}
+
 #player1Score {
   float: left;
+  color: #A40E4C;
+  /*background-color: white;*/
+  font-family: 'Chewy', serif;
 }
+
 #player2Score {
   float: right;
+  color: #F49D6E;
+  /*background-color: white;*/
+  font-family: 'Chewy', serif;
 }
 #current-player-display {
   height: 25px;
@@ -86,11 +82,11 @@ h1 {
 }
 
 .horizontal:hover {
-  background-color: black;
+  background-color: #a6a6a6;
 }
 
 .vertical:hover {
-  background-color: black;
+  background-color: #a6a6a6;
 }
 
 .horizontal {
@@ -116,4 +112,10 @@ h1 {
   margin-right:-4px;
   /*border: 1px solid black;*/
   display: inline-block;
+}
+
+button {
+  border: 0;
+  height: 22px;
+  margin: 25px;
 }

@@ -1,9 +1,44 @@
-h1 {
-  text-align: center;
+
+
+/**this will make my image transparent**/
+.background-image {
+  height: 100%;
+  width: 100%;
+  display: block;
+  min-width: 250px;
+}
+.background-image::after {
+  content: "";
+  background:url("graphpaper.jpg");
+  opacity:0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right:0;
+  position: absolute;
+  z-index: -1;
+}
+body {
+  min-width: 250px;
 }
 
+h1 {
+  text-align: center;
+
+}
+.heading {
+  opacity: 1;
+}
+#player1Score {
+  float: left;
+}
+#player2Score {
+  float: right;
+}
+#current-player-display {
+  height: 25px;
+}
 #game-board {
-  height: 400px;
   text-align: center;
 }
  #row1 {
@@ -17,6 +52,27 @@ h1 {
  }
 #row4 {
   height:33px;
+}
+#row5 {
+  height: 13px;
+}
+#row6 {
+  height: 34px;
+}
+#row7 {
+  height: 13px;
+}
+#row8 {
+ height:33px;
+}
+#row9 {
+  height: 13px;
+}
+#row10 {
+  height: 34px;
+}
+#row11 {
+  height: 13px;
 }
 
 .dots {
@@ -54,8 +110,8 @@ h1 {
 }
 
 .box {
-  height: 45px;
-  width: 45px;
+  height: 46px;
+  width: 44px;
   margin-left: -4px;
   margin-right:-4px;
   /*border: 1px solid black;*/

@@ -7,157 +7,165 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Dots and Boxes</h1>
-    <div id="game-board">
-      <div id="row1">
-        <div class="dots"></div>
-        <div class="horizontal box-0"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-1"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-2"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-3"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-4"></div>
-        <div class="dots"></div>
-      </div>
-      <div id="row2">
-        <div class="vertical box-0"></div>
-        <div id="box0" class="box"></div>
-        <div class="vertical box-0-1"></div>
-        <div id="box1" class="box"></div>
-        <div class="vertical box-1-2"></div>
-        <div id="box2" class="box"></div>
-        <div class="vertical box-2-3"></div>
-        <div id="box3" class="box"></div>
-        <div class="vertical box-3-4"></div>
-        <div id="box4" class="box"></div>
-        <div class="vertical box-4"></div>
-      </div>
-      <div id="row3">
-        <div class="dots"></div>
-        <div class="horizontal box-0-5"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-1-6"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-2-7"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-3-8"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-4-9"></div>
-        <div class="dots"></div>
+    <div class="background-image"></div>
+      <div class="heading"><h1>Dots and Boxes</h1></div>
 
-      </div>
-      <div id="row4">
-        <div class="vertical box-5"></div>
-        <div id="box5" class="box"></div>
-        <div class="vertical box-5-6"></div>
-        <div id="box6" class="box"></div>
-        <div class="vertical box-6-7"></div>
-        <div id="box7" class="box"></div>
-        <div class="vertical box-7-8"></div>
-        <div id="box8" class="box"></div>
-        <div class="vertical box-8-9"></div>
-        <div id="box9" class="box"></div>
-        <div class="vertical box-9"></div>
-      </div>
-      <div id="row5">
-        <div class="dots"></div>
-        <div class="horizontal box-5-10"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-6-11"></div>
-        <div class="dots"></div>
-
-        <div class="horizontal box-7-12"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-8-13"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-9-14"></div>
-        <div class="dots"></div>
-
-      </div>
-      <div id="row6">
-        <div class="vertical box-10"></div>
-        <div id="box10" class="box"></div>
-        <div class="vertical box-10-11"></div>
-        <div id="box11" class="box"></div>
-        <div class="vertical box-11-12"></div>
-        <div id="box12" class="box"></div>
-        <div class="vertical box-12-13"></div>
-        <div id="box13" class="box"></div>
-        <div class="vertical box-13-14"></div>
-        <div id="box14" class="box"></div>
-        <div class="vertical box-14"></div>
-      </div>
-      <div id="row7">
-        <div class="dots"></div>
-        <div class="horizontal box-10-15"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-11-16"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-12-17"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-13-18"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-14-19"></div>
-        <div class="dots"></div>
-      </div>
-      <div id="row8">
-        <div class="vertical box-15"></div>
-        <div id="box15" class="box"></div>
-        <div class="vertical box-15-16"></div>
-        <div id="box16" class="box"></div>
-        <div class="vertical box-16-17"></div>
-        <div id="box17" class="box"></div>
-        <div class="vertical box-17-18"></div>
-        <div id="box18" class="box"></div>
-        <div class="vertical box-18-19"></div>
-        <div id="box19" class="box"></div>
-        <div class="vertical box-19"></div>
-      </div>
-      <div id="row9">
-        <div class="dots"></div>
-        <div class="horizontal box-15-20"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-16-21"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-17-22"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-18-23"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-19-24"></div>
-        <div class="dots"></div>
-      </div>
-      <div id="row10">
-        <div class="vertical box-20"></div>
-        <div id="box20" class="box"></div>
-        <div class="vertical box-20-21"></div>
-        <div id="box21" class="box"></div>
-        <div class="vertical box-21-22"></div>
-        <div id="box22" class="box"></div>
-        <div class="vertical box-22-23"></div>
-        <div id="box23" class="box"></div>
-        <div class="vertical box-23-24"></div>
-        <div id="box24" class="box"></div>
-        <div class="vertical box-24"></div>
-      </div>
-      <div id="row11">
-        <div class="dots"></div>
-        <div class="horizontal box-20"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-21"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-22"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-23"></div>
-        <div class="dots"></div>
-        <div class="horizontal box-24"></div>
-        <div class="dots"></div>
-      </div>
       <div id="player1Score"></div>
       <div id="player2Score"></div>
-    </div>
+
+      <div id="game-board">
+        <div id="current-player-display">
+          <p>Player 1 Start Drawing</p>
+        </div>
+        <div id="row1">
+          <div class="dots"></div>
+          <div class="horizontal box-0"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-1"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-2"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-3"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-4"></div>
+          <div class="dots"></div>
+        </div>
+        <div id="row2">
+          <div class="vertical box-0"></div>
+          <div id="box0" class="box"></div>
+          <div class="vertical box-0-1"></div>
+          <div id="box1" class="box"></div>
+          <div class="vertical box-1-2"></div>
+          <div id="box2" class="box"></div>
+          <div class="vertical box-2-3"></div>
+          <div id="box3" class="box"></div>
+          <div class="vertical box-3-4"></div>
+          <div id="box4" class="box"></div>
+          <div class="vertical box-4"></div>
+        </div>
+        <div id="row3">
+          <div class="dots"></div>
+          <div class="horizontal box-0-5"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-1-6"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-2-7"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-3-8"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-4-9"></div>
+          <div class="dots"></div>
+
+        </div>
+        <div id="row4">
+          <div class="vertical box-5"></div>
+          <div id="box5" class="box"></div>
+          <div class="vertical box-5-6"></div>
+          <div id="box6" class="box"></div>
+          <div class="vertical box-6-7"></div>
+          <div id="box7" class="box"></div>
+          <div class="vertical box-7-8"></div>
+          <div id="box8" class="box"></div>
+          <div class="vertical box-8-9"></div>
+          <div id="box9" class="box"></div>
+          <div class="vertical box-9"></div>
+        </div>
+        <div id="row5">
+          <div class="dots"></div>
+          <div class="horizontal box-5-10"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-6-11"></div>
+          <div class="dots"></div>
+
+          <div class="horizontal box-7-12"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-8-13"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-9-14"></div>
+          <div class="dots"></div>
+
+        </div>
+        <div id="row6">
+          <div class="vertical box-10"></div>
+          <div id="box10" class="box"></div>
+          <div class="vertical box-10-11"></div>
+          <div id="box11" class="box"></div>
+          <div class="vertical box-11-12"></div>
+          <div id="box12" class="box"></div>
+          <div class="vertical box-12-13"></div>
+          <div id="box13" class="box"></div>
+          <div class="vertical box-13-14"></div>
+          <div id="box14" class="box"></div>
+          <div class="vertical box-14"></div>
+        </div>
+        <div id="row7">
+          <div class="dots"></div>
+          <div class="horizontal box-10-15"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-11-16"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-12-17"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-13-18"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-14-19"></div>
+          <div class="dots"></div>
+        </div>
+        <div id="row8">
+          <div class="vertical box-15"></div>
+          <div id="box15" class="box"></div>
+          <div class="vertical box-15-16"></div>
+          <div id="box16" class="box"></div>
+          <div class="vertical box-16-17"></div>
+          <div id="box17" class="box"></div>
+          <div class="vertical box-17-18"></div>
+          <div id="box18" class="box"></div>
+          <div class="vertical box-18-19"></div>
+          <div id="box19" class="box"></div>
+          <div class="vertical box-19"></div>
+        </div>
+        <div id="row9">
+          <div class="dots"></div>
+          <div class="horizontal box-15-20"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-16-21"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-17-22"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-18-23"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-19-24"></div>
+          <div class="dots"></div>
+        </div>
+        <div id="row10">
+          <div class="vertical box-20"></div>
+          <div id="box20" class="box"></div>
+          <div class="vertical box-20-21"></div>
+          <div id="box21" class="box"></div>
+          <div class="vertical box-21-22"></div>
+          <div id="box22" class="box"></div>
+          <div class="vertical box-22-23"></div>
+          <div id="box23" class="box"></div>
+          <div class="vertical box-23-24"></div>
+          <div id="box24" class="box"></div>
+          <div class="vertical box-24"></div>
+        </div>
+        <div id="row11">
+          <div class="dots"></div>
+          <div class="horizontal box-20"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-21"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-22"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-23"></div>
+          <div class="dots"></div>
+          <div class="horizontal box-24"></div>
+          <div class="dots"></div>
+        </div>
+
+      </div>
+
     <script src="app.js"></script>
   </body>
 </html>

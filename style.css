@@ -36,6 +36,7 @@ h1 {
 }
 #game-board {
   text-align: center;
+  width: 400px;
 }
  #row1 {
    height: 13px;

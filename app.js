@@ -47,29 +47,18 @@ var verticalLines = $('.vertical')
 
 var counter = 0
 
-// for (var i = 6; i < ; i++) {
 
+// reset page/game button
 $('#reset').click(function () {
   location.reload();
 })
 
-// determines current player and switches turns
-// var currentPlayer
-// function switchTurns() {
-//   if (counter %2 == 0) {
-//     console.log("player 1")
-//     currentPlayer = game.playe2
-//   } else {
-//     console.log("player 2");
-//     currentPlayer = game.player1
-//   }
-// }
-
-
 // tracks current players turn
 var currentPlayer = game.player1
+// toggles underline display of current player
 currentPlayer.display.toggleClass('active')
 
+// determines current player and switches turns
 function switchTurns() {
   if(currentPlayer == game.player1) {
     currentPlayer = game.player2
@@ -79,20 +68,13 @@ function switchTurns() {
 game.player1.display.toggleClass('active')
 game.player2.display.toggleClass('active')
 
+// after game starts removes opening directions
   $('#current-player-display').html('')
 }
 
-function whichPlayer() {
-  if (counter %2 == 0) {
-    console.log("player 1")
-    return game.player1
-  } else {
-    console.log("player 2");
-    return game.player2
-  }
-}
-// console.log(game.boxes[0].length);
-
+// check for winner function
+// checks all arrays, once all arrays have a length of 4 it counts the boxes and compares
+// player1 to player2 and evaluates a winner
 function checkWinner() {
   var boxCounter = 0
   for (var i = 0; i < game.boxes.length; i++) {
@@ -117,14 +99,19 @@ var lines = function (line) {
   line.on('click', function () {
     var sameTurn = false;
     if (this.getAttribute('style') != 'background-color: #a6a6a6;') {
-      // console.log($(this).attr('class'));
+//if div does not have color, then add color
       $(this).css('backgroundColor','#a6a6a6')
-      // console.log(this.classList[1].split('-'));
+// push class to its respective array. split by dashes
       var theBoxes = this.classList[1].split('-');
+      // since box is the first character of class begin array at 1, box index value is then split
+      // and added into the arrays
       for (var i=1; i<theBoxes.length; i++){
+        // push values to arrays according to index by value
         game.boxes[theBoxes[i]].push('line-click');
-        //  console.log(game.boxes[theBoxes[i]], theBoxes[i])
+        // checks to see if boxes borders are all drawn
         if (game.boxes[theBoxes[i]].length > 3) {
+          //if the array for the indexed box is greater than 3 the box is filled
+          // with the current players color and a point is added
           $('#box' + theBoxes[i]).css('background-color', currentPlayer.color)
           currentPlayer.points +=1
 
@@ -138,7 +125,7 @@ var lines = function (line) {
       }
       checkWinner()
 
-        // turns off click event
+        // turns off click event so lines cant be clicked twice
       $(this).off('click');
     }
   })

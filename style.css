@@ -88,6 +88,8 @@ h1 {
   background-color: black;
   border-radius: 50%;
   display: inline-block;
+  z-index: 9999;
+  position: relative;
 
 }
 

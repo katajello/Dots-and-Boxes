@@ -37,4 +37,4 @@ Future Implementation:
 
 
 
-You can play the game here: Link
+You can play the game here: http://katajello.github.io/Dots-and-Boxes/
